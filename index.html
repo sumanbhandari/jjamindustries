@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      max-width: 1430px;
+      display: inline;
+    }
+
+    header {
+        background-color: #111;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+    }
+  
+    header h1 {
+    font-size: 2.5rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    }
+
+    header p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    }
+
+    .image-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 40px;
+      justify-content: center;
+      gap:2rem;
+    }
+
+    .column {
+      display: flex;
+      width: 430px;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .column img {
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;      
+    }
+
+    .middle img:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+  
+      .middle img:nth-child(2) {
+        animation-delay: 0.8s;
+      }
+  
+      .left img:nth-child(1) { animation-delay: 1.4s; }
+      .left img:nth-child(2) { animation-delay: 2.0s; }
+      .left img:nth-child(3) { animation-delay: 2.6s; }
+  
+      .right img:nth-child(1) { animation-delay: 3.2s; }
+      .right img:nth-child(2) { animation-delay: 3.8s; }
+      .right img:nth-child(3) { animation-delay: 4.4s; }
+  
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    @media (max-width: 1430px) {
+        .image-section {
+          flex-direction: column;
+          align-items: center;
+          gap: 2rem;
+        }
+  
+        .column {
+          flex-direction: column;
+          align-items: center;
+          width: 600px;
+          gap: 2rem;
+        }
+  
+        .image-section .column:nth-child(2) {
+          order: -1; /* bring middle column to top */
+        }
+        .column img {
+            width: 100%;
+          }
+      }    
+
+  </style>
+</head>
+<body>
+    <header>
+        <p>
+          Organic Fertilizer accelerators, Water reduction in all crops, Crop Yield increase, Crop pest reduction.<br>
+          Turf Accelerator, Racecourse Accelerator, Food Security, Soil health, Insecticide reductions.<br>
+          Organic, Geopolymers, Agriculture.
+        </p>
+      </header>
+
+  <section class="image-section">
+    <div class="column left">
+      <img src="images/img1.png" alt="Left 1">
+      <img src="images/img2.png" alt="Left 2">
+      <img src="images/img3.png" alt="Left 3">
+    </div>
+    <div class="column middle">
+      <img src="images/main-logo.png" alt="Middle 1">
+      <img src="images/img4.png" alt="Middle 2">
+    </div>
+    <div class="column right">
+      <img src="images/img5.png" alt="Right 1">
+      <img src="images/img6.png" alt="Right 2">
+      <img src="images/img7.png" alt="Right 3">
+    </div>
+  </section>
+</body>
+</html>
